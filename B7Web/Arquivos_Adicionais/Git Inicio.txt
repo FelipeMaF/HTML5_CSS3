@@ -20,7 +20,7 @@
 	*Se mostrar nome verde:
 		git commit -m "comentário"	//Aqui ele irá commitar, ou seja, tornar aquele arquivo de "rascunho" em um arquivo "permanente".
 	*Enviar para o Repositorio Remoto(online no git):
-		git push	//Enviou todos arquivos que estavam commitados.
+		git push -u origin main		//Enviou todos arquivos que estavam commitados.
 
 2º Remover arquivos do Stage/RepositorioRemoto
 	*Para retirar um arquivo do Stage
