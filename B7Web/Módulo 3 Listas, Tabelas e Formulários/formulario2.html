@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 2</title> <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    
+</body>
+</html>
+
+<form method="POST" action="blabla.php" enctype="multipart/form-data"><!-- o multipart serve para converter o arquivo em bytes para receber ele. ele é necessario quando tem campo de File -->
+
+    <fieldset> <!-- Fieldset cria um conjunto de campos -->
+        <legend>Dados pessoais</legend><!-- cria uma legenda no campo criando pelo fieldset -->
+        <label>
+            Primeiro nome: <br>
+            <input type="text" name="name" required minlength="3" maxlength="10"> <!-- 
+                * O "required" torna essa opção obrigatoria de ser preenchida pelo usuario.
+                *O "minlenght" define uma quantidade minima de caracteres que deve ser usado.
+                *O "maxlenght" define o máximo de caracteres que pode ser usado.
+          -->
+        </label>
+    
+        <label>
+            Sobrenome: <br>
+            <input type="text" name="lastname" id="">
+        </label>
+
+        <label>
+            Email: <br>
+            <input type="text" name="email" pattern="">
+        </label>
+
+        <label>
+            Foto: <br>
+            <input type="file" name="foto" accept="image/*">
+        </label>
+
+
+
+        <label>
+            Idade: <br>
+            <input type="date" name="birthday" required >
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Dados profissionais</legend>
+        <label>
+            Nome da empresa: <br>
+            <input type="text" name="company" id="">
+        </label>
+    
+        <label>
+            Cargo na empresa: <br>
+            <input type="text" name="companyjob" id="">
+        </label>
+
+    <!-- Deixar um campo de informação invisivel "hidden"-->
+        <input type="hidden" name="country" value="BR">
+
+    </fieldset>
+
+      <input type="submit" name="" id="">
+
+    </form>

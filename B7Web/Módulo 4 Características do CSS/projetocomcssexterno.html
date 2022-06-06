@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do css externo</title> 
+    <link rel="stylesheet" href="estilo.css"> <!-- Esta é a tag que linka esta pagina a pagina do CSS externo, ou seja, essa tag diz para o programa que a pagina do css que foi linkada será o seu estilo. -->
+
+</head>
+
+<body> 
+
+    <h1>Titulo !!</h1>
+    <h2>Sub titulo</h2>
+    <h3>Sub-Sub titulo</h3>
+    <h6>Subzinho Titulo</h6>
+
+
+    <h2>{Esta é a diferença entre usar o (/p) de paragrafo 
+        e usar o (h) para escrever, esse exemplo usa o (H))}</h2>
+
+    
+    <h2>{Esta é a diferença entre usar o (/p) de paragrafo 
+        e usar o (h) para escrever</h2>
+    <p>esse exemplo usa o (P/), aqui tem quebra de linha, no de cima não}</p>
+    <p>mas o tamanho do texto do "p" por padrão é pequeno, então temos de adiconar uma tag "h" dentro da "p" para aumentar o tamanho da fonte do texto, como no exemplo abaixo</p>
+ 
+    <p><h2>Aqui estou utilizando h2 dentro da tag p.</h2></p>
+    
+    <a href="https://www.google.com.br">Clique aqui para entrar no google</a>
+
+<br>
+
+    <img src="https://www.google.com.br/google.jpg" width="100px" height="50px">
+    <br>
+  
+    <img src="https://www.google.com.br/google.jpg" alt="logo da google" />
+
+    <br>
+
+    <button>Sou um botão sem ação</button>
+<br><br>
+
+    <h3>Lista de Bolo</h3>
+        <ul>
+            <li>Farinha</li>
+            <li>Ovo</li>
+            <li>Leite</li>
+            <li>Calda de chocolate</li>
+    </ul>
+    <h3>Lista ordenada</h3>
+        <ol>
+            <li>Farinha</li>
+            <li>Ovo</li>
+            <!-- usando a class de exemplo, pode por em qualquer tag -->
+            <li class="texto">Leite</li>
+            <li>Calda de chocolate</li>
+    </ol>
+
+    <!-- Aqui iremos alterar o texto utilizando CSS externo, no css externo nós linkamos esta pagina na pagina criada exteriormente para servir de CSS, são 3 formas de selecionar os elementos dos quais queremos alterar.
+    1. Pela tag "do proprio elemento", exemplo "h1{color red}: assim todos elementos com h1 ficariam vermelhos
+    2. Pela tag "Class", que é a mais utilizada, colocamos a tag class dentro do elemento e aqui alteramos ela da seguinte forma:
+    .nomedaclass {color red}: assim todos elementos que contenham a classe denominada ficarão vermelhos e os demais seguiram o padrão já estabelecido.
+    3. Pela tag "ID", a tag id é o mesmo esquema da tag class, porém não se usa muito, pois ela é indicada para usar em apenas uma linha. -->
+    
+    <!-- 1. Pela tag do proprio elemento -->
+    <h2>Texto usando h2 normal</h2>
+
+    <!-- 2. Pela tag Class -->
+                <h2 class="texto">Texto usando h2 com class de identificação</h2>
+    <h2 class="texto">Texto usando h2 com class igual ao de cima</h2>
+
+     <!-- 3. Pela tag ID -->
+     <h2 id="titulo">Texto usando h2 com id de identificação</h2>
+
+
+<!-- ==========BORDAS============  -->
+     <h2 id="bg1">teste de cores "background"</h2>
+     <h2 id="bg2">teste de cores "border right"</h2>
+     <h2 id="cor2">teste de cores "border solid"</h2>
+     <h2 id="cor3">teste de cores "border solid"</h2>
+     <h2 id="cor4">teste de cores "border dotted"</h2>
+     <h2 id="cor5">teste de cores "border dashed"</h2>
+     <h2 id="cor6">teste de cores "border double"</h2>
+     <h2 id="cor7">teste de cores "border grove"</h2>
+     <h2 id="cor8">teste de cores "border bottom"</h2>
+     <h2 id="cor9">teste de cores "border top"</h2>
+     <h2 id="cor10">teste de cores "border left"</h2>
+     <h2 id="cor11">teste de cores "border right"</h2>
+
+
+
+     <!-- ==========DIV============ -->
+<!-- A "div" é um espaço quadrado do qual vc pode editar da maneira que preferir -->
+
+<h3>A "div" é um espaço quadrado do qual vc pode editar da maneira que preferir</h3>
+<div id="div1"> </div>
+<!-- Div com border radius -->
+<h3>Div com border radius e borda externa</h3>
+<div id="div2"> </div>
+<br><br>
+    <!-- ================Margin e Padding======== -->
+<div class="margpad">Texto de exemplo de margin e padding, a margin é esse espaço externo que dá da borda em relaçao ao conteudo da pagina e padding é o espaço interno</div>
+
+<div class="margpadpadrao">Texto de exemplo de margin e padding, a margin é esse espaço externo que dá da borda em relaçao ao conteudo da pagina e padding é o espaço interno</div>
+
+
+<div class="margpad2">Texto de exemplo de margin e padding, a margin é esse espaço externo que dá da borda em relaçao ao conteudo da pagina e padding é o espaço interno</div>
+
+<div class="margpad3">Texto de exemplo de margin e padding, a margin é esse espaço externo que dá da borda em relaçao ao conteudo da pagina e padding é o espaço interno</div>
+
+<div class="margpad4">Texto de exemplo de margin e padding, a margin é esse espaço externo que dá da borda em relaçao ao conteudo da pagina e padding é o espaço interno</div>
+
+<br><br>
+<!-- Tamanhos e largura com "%"" e "px" -->
+<div class="talarg"></div>
+<br>
+<!-- Tamanhos e largura "auto" -->
+<div class="talarg2"></div>
+
+
+</body>
+</html>
+
+
+-->

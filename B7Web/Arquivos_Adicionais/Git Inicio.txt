@@ -1,0 +1,109 @@
+1º Após abrir o GitBash pela primeira vez na pasta
+	*Conferir e Apontar
+		git init	//ele torna de repositorio a pasta onde voce abriu o "git bash" ou marcou como seu diretorio.
+		git branch -M main	//Caso seu git esteja com o nome antigo "Master" ele altera para o atualizado "main"
+		git config --list	//confere se está logado. Apertar "Q" para sair do menu
+	*SeNão:
+		git config --global user.name "nome"	//Qualquer nome
+		git config --global user.email "email"	//Email do Git
+	*Logado:
+		git remote add origin https://github.com/nomeusuario/repositoriourl.git
+	*Se irá baixar um Repositorio do Git:
+		git clone https://github.com/nomeusuario/repositoriourl.git
+	*Se irá upar seu Repositorio ou atualizações feitas no repositorio baixado Git:
+		git status	//Mostra todos arquivos novos ou alterados
+	*Se mostrar nome vermelho:
+		git add . 	//Salva todos os arquivos alterados ou adicionados como um "rascunho"
+	ou
+		git add nomedoarquivo	//Salva o arquivo alterado ou adicionado no Stage (como se fosse um "rascunho")
+		git status	//Mostra todos arquivos novos ou alterados
+	*Se mostrar nome verde:
+		git commit -m "comentário"	//Aqui ele irá commitar, ou seja, tornar aquele arquivo de "rascunho" em um arquivo "permanente".
+	*Enviar para o Repositorio Remoto(online no git):
+		git push	//Enviou todos arquivos que estavam commitados.
+
+2º Remover arquivos do Stage/RepositorioRemoto
+	*Para retirar um arquivo do Stage
+		git restore --staged .	//Remove todos arquivos do Stage (com nome vermelho ao dar git status)
+		git restore --staged nomedo.arquivo		//Remove o arquivo do Stage (com nome vermelho ao dar git status)
+		ou						//Pesquisar a diferença dos dois comandos.
+		git rm --cached .
+		git rm --cached nomedo.arquivo		
+
+	*Para Deletar um arquivo no Repositorio Remoto
+		ls	//Para ver o conteudo do diretorio
+		git rm nomedo.arquivo	//Deleta o arquivo que apontou e já manda para area de Stage "rascunho"
+		git status	//O arquivo está verde, no Stage "rascunho"
+		git commit -m "comentario"	//commitou ele, ta permanente, pronto pra ser enviado o comando de delete.
+		git push	//Atualizou o repositorio, sincronizando o delete.
+
+3º Ao reabrir o GitBash Conferir/Configurar
+
+	*Conferir
+		git branch -M main	//Caso seu git esteja com o nome antigo "Master" ele altera para o atualizado "main"
+		git config --list	//confere se está logado. Apertar "Q" para sair do menu
+		git remote 			//confere o nome da origem
+		git remot -v 		//confere se está com um repositorio apontado
+
+	*Para logar:
+		git config --global user.name "nome"	//Qualquer nome
+		git config --global user.email "email"	//Email do Git
+	
+	*Para apontar o repositorio/Clonar:
+		git init	//ele torna de repositorio a pasta onde voce abriu o "git bash" ou marcou como seu diretorio.
+		git remote add origin https://github.com/nomeusuario/repositoriourl.git
+		git clone https://github.com/nomeusuario/repositoriourl.git
+
+
+
+Comandos Git.. continua
+git diff	//mostra as alterações que não foram salvas no stage.
+git diff --staged	//mostra as alterações dos arquivos que estão no stage
+ou
+git diff nomedoarquivo
+git diff --staged nomedoarquivo
+
+git pull	//atualiza o repositorio local igual o remoto
+
+
+
+
+2ºPasso: RepositorioLocal/Stage/Commit/:
+
+	git init	//ele torna de repositorio a pasta onde voce abriu o "git bash" ou marcou como seu diretorio.
+	git add .	//Adiciona os arquivos ao repositorio temporario "stage", ele fica présalvo, ainda não foi enviado.
+	git status	//Mostra todos arquivos novos ou alterados
+	git commit -m "comentário do que fez"	//aqui voce salva uma nova versão do seu arquivo, pega as alteração que estão no "Stage" e criam uma versão "Commit" nova.
+
+3ºPasso: Associar a origem ao destino/Enviar:
+
+	
+	git push -u origin main		//Ele envia seu commit salvo para o GitHub, já vai direto para o repositorio do Git.
+
+4ºPasso: Após tudo apontado e salvo, para enviar novos Commits:
+
+	git status		//para ver oque foi mudado (fica escrito em vermelho pois não está no "Stage"
+	git add . 		//Jogou os arquivos alterados para o "Stage"
+	git status		//Agora os arquivos aparecem novamente, porém em verde, indicando que estão prontos para serem enviados para o repositorio.
+	git commit -m "comentário"		//Agora salva o commit com o comentario apontando oque foi alterado.
+	git push		//Envia o commit para o GitHub
+
+Comandos:
+ls	//exibe o conteudo da pasta
+cd nomedapasta		//entra no caminho da pasta que colocou o nome
+clear	//limpa a tela
+
+
+*Obs: Chave SSH cadastra o computador no GitHub para poder salvar com sua assinatura.
+
+Explicação figurativa do funcionamento do Git:
+
+Imagine que voce irá enviar um carro pelo correio, para uma concessonaria, para isso voce precisará desmontar ele e embalar com proteção e embalar ele em várias caixas.
+A concessonaria é o Repositorio Github, virtual.
+A sua mesa onde voce irá preparar as peças e embalalas é sua Pasta de projeto, onde estão todas as peças.
+Cada carro é um tipo de envio diferente que ira fazer, então em cada mesa tem um carro para desmontar
+Ao escolher sua mesa voce aponta ela como o trabalho que irá fazer, o carro que ira enviar está ali (git init)
+Após voce pegar algumas peças do carro e enrolar elas em plastico bolha para proteger, já garantindo que elas vão para esta caixa (git add .) voce pode embrulhar varias peças e depois novamente apontar que ela irão para a caixa (git add .)
+No outro dia voce verifica se existem peças apenas ambrulhadas, fora da caixa (git status)
+Então coloca todas peças embrulhadas dentro da caixa (git commit -m "peças do dia x") e deixa a caixa ainda na sua casa.
+Então pega a caixa e envia ela para a concessonaria (git push)

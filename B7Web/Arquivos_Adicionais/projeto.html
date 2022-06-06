@@ -1,0 +1,280 @@
+<!DOCTYPE html> <!-- Esse comando é para dizer para o navegador que ele pode usar todos os recursos avançados do html5, sempre usar isso por padrão -->
+<html lang="en">
+<head> <!-- Head é o cabeçalho -->
+    <meta charset="UTF-8"> <!-- Esse comando é para usar uma configuração de caracteres, para aparecer os acentos sem distorção -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Esse é o comando que torna o sit responsivo -->
+    <title>Página de treinamento</title> <!-- Title é o titulo que aparece em na aba da pagina do navegador -->
+<link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body> <!-- Body é o corpo da pagina, toda estrutura -->
+
+<!-- ====TEXTO PARA EDIÇÃO==== -->
+    <!-- ******Tag "h" Aqui é as configurações de texto
+    os "h" são os tamanhos de texto, por exemplo h1 h2...h6 -->
+    <h1>Titulo !!</h1>
+    <h2>Sub titulo</h2>
+    <h3>Sub-Sub titulo</h3>
+    <h6>Subzinho Titulo</h6>
+
+    <!-- Rolagem de barra com linkagem de ancora exemplo -->
+    <a href="#area1">Ir para o final da pagina</a>
+
+<!-- ******O Html por padrão não quebra linha automaticamente, então é necessario usar tags proprias para dar a quebra de linha no texto, entre essas tags para quebra de linha temos <p> -->
+    <h2>{Esta é a diferença entre usar o (/p) de paragrafo 
+        e usar o (h) para escrever, esse exemplo usa o (H))}</h2>
+
+    <!-- Aqui usaremos o /p -->
+    <h2>{Esta é a diferença entre usar o (/p) de paragrafo 
+        e usar o (h) para escrever</h2>
+    <p>esse exemplo usa o (P/), aqui tem quebra de linha, no de cima não}</p>
+    <p>mas o tamanho do texto do "p" por padrão é pequeno, então temos de adiconar uma tag "h" dentro da "p" para aumentar o tamanho da fonte do texto, como no exemplo abaixo</p>
+
+    <!-- Aumentando o tamanho do /p -->
+    <p><h2>Aqui estou utilizando h2 dentro da tag p.</h2></p>
+    
+<!-- ****Tag para ancorar um link no texto**** -->
+    <a href="https://www.google.com.br">Clique aqui para entrar no google</a>
+
+<!-- ****"br" é comando para pular linha, par pular mais de uma linha é só colocar mais "br"*** -->
+<br>
+
+<!-- *****Tag para colocar imagem***** -->
+    <img src="https://www.google.com.br/google.jpg">
+    <br>
+
+        <!-- Configuração para mudar o tamanho -->
+    <img src="https://www.google.com.br/google.jpg" width="100px" height="50px">
+    <br>
+
+        <!-- A tag "Alt" coloca uma descrição na imagem, ela aparece caso a pagina demore para carregar a imagem, ou tenha recurso de economia de dados, ou para quem tem problema visual e utiliza a ferramenta de leitura de pagina, assim a descrição vai ser lida. -->
+    <img src="https://www.google.com.br/google.jpg" alt="logo da google" />
+
+
+    <br>
+
+<!-- ****Tag de colocar botão***** -->
+    <button>Sou um botão sem ação</button>
+<br><br>
+
+    <h3>Lista de Bolo</h3>
+<!-- ******Tags para criar listas***** -->
+    <ul>
+        <li>Farinha</li>
+        <li>Ovo</li>
+        <li>Leite</li>
+        <li>Calda de chocolate</li>
+    </ul>
+<h3>Lista ordenada</h3>
+    <!-- Para criar uma lista ordenada por numeros usamos "ol" -->
+    <ol>
+        <li>Farinha</li>
+        <li>Ovo</li>
+        <li>Leite</li>
+        <li>Calda de chocolate</li>
+    </ol>
+<br><br>
+<!-- ========================CSS========================== -->
+<!-- 
+    O CSS é o uso da tag "style" que vc usa para ir criando as modificações de estética dentro dela, e aplicando elas diretamente nas linhas ou para toda uma tag especifica (por exemplo para h1, assim todos itens que usam a tag "h1" setão modificados em conjunto, ou usando ele externo em uma aba dedicada para CSS. )
+    São 3 Formas de aplicar o CSS
+1 - CSS inline
+2 - CSS interno
+3 - CSS externo
+ -->
+
+<!--*******Aplicando o CSS INLINE*******-->
+
+    <!-- *CSS no texto* -->
+
+    <h1>Exemplo de uso do CSS s/css</h1>
+    <h1 style="color: red;">Exemplo de uso do CSS c/css</h1>
+    <!-- Colocando mais de uma modificação, é só colocar ";" depois de cada codigo de modificação -->
+    <h1 style="color: red;font-size:50px">Exemplo de uso do CSS c/css</h1>
+
+
+
+    <!-- *CSS na imagem* -->
+
+    <img src="https://www.google.com.br/google.jpg">
+<br>
+    <img src="https://www.google.com.br/google.jpg" style="width: 100px">
+<br><br>
+    <!-- *CSS em link* -->
+
+    <a href="https://www.google.com.br">Clique aqui para entrar no google</a>
+<br>
+    <a href="https://www.google.com.br" style="font-size:20px;">Clique aqui para entrar no google</a>
+
+    <!-- CSS em Lista -->
+    <h3>Lista com simbolos diferentes</h3>
+
+    <ul style="list-style-type:lower-roman">
+        <li>café</li>
+        <li>leite</li>
+        <li>pÃO</li>
+    </ul>
+<br><br>
+<!-- Aqui, poderia ser "1" "a" "I", que ele iria seguir a sequencia automaticamente sendo maiusculo ou minusculo, exemplo "a"b.c.d.... -->
+    <ol type="A">
+        <li>café</li>
+        <li>leite</li>
+        <li>pÃO</li>
+    </ol>
+    <br>
+<!-- Para começar a partir de um ponto definido por vc -->
+    <ol start="32">
+        <li>café</li>
+        <li>leite</li>
+        <li>pÃO</li>
+    </ol>
+<br><br>
+<!-- Lista dentro de lista -->
+<ul>
+    <li>café</li>
+        <ul>
+            <li>Soluvis</li>
+            <li>tres corações</li>
+        </ul>
+    <li>leite</li>
+    <li>pÃO</li>
+</ul>
+
+
+
+<!-- ********CSS Interno e Externo********
+os exemplos do CSS interno e externo estão nas outras abas de projeto. -->
+<br><br><br><br>
+
+<!-- ==========LINKS========== -->
+
+    <!--Para linkar a uma pagina do proprio sit, para linkar assim ele deve estar na mesma pasta usada para criar o sit -->
+    <h3>Abaixo mostra como funciona o redirecionamento de pagina através de link</h2>
+    
+    <a href="login.html" class="link">Pagina de Login</a>
+
+
+    <h3>Esta pagina está em outra pasta externa aqui é um exemplo de redirecionamento dentro de paginas dentro de pastas</h3>
+<!-- Redirecionando paginas dentro de pastas -->
+    <a href="paginas/login2.html" 
+    class="link">Fazer login pagina 2</a>
+<br>
+    <!-- Abrir pagina em uma nova aba em branco usa se o "target="_blank" segue o exemplo -->
+    <a href="paginas/login2.html" 
+    class="link"
+    target="_blank">
+    Fazer login pagina 2 nova aba</a>
+
+    <br>
+
+    <h3>parar o mouse em cima do link abaixo para ver a descrição</h3>
+    <!-- A tag Title faz com que ao passar o mouse no link apareça um texto de descrição -->
+    <a href="paginas/login2.html"
+    class="link" 
+    title="Texto de descrição" >Fazer login pagina com title</a>
+    
+    <br><br>
+    <!-- Editando imagem com link entre outros -->
+        <h3>Clique para ir para o google</h3>
+
+    <a href="https://www.google.com.br"
+    class="link" 
+    target="_blank">
+    <img src="https://www.google.com.br/google.jpg" alt="Google">
+        
+<br><br>
+    <!-- ***rolagem de barra automatica***, como indice, é só criar uma ancora e linkar com "#nomedaid" que ao clicar a barra ira rolar automaticamente para a area da qual foi linkada -->
+        <h2 id="area1">Final da pagina. Testando a rolagem de barra</h2>
+    
+
+    </a>
+
+
+    <!--=========TABELAS========== -->
+
+    <H3>Tabelas</H3>
+
+    <table border="1" width="400">
+        <thead>
+            <tr>
+                <th>Item 1</th>
+                <th>Item 2</th>
+            </tr>
+            
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+
+            <tr>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+
+            <tr>
+                <td>....</td>
+                <td>....</td>
+            </tr>
+        </tbody>
+        
+    </table>
+<br><br>
+
+<H3>Tabela Com CSS</H3>
+
+    <table class="tabela" border="0">
+        <thead>
+            <tr>
+                <th>Item 1</th>
+                <th>Item 2</th>
+                <th>Item 3</th>
+            </tr>
+            
+        </thead>
+
+        <tbody class="tabela">
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+
+            <tr>
+                <td>....</td>
+                <td>....</td>
+                <td>....</td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+<br><br>
+
+<!-- =======FORMULARIOS====== -->
+
+    <h2>Formularios</h2>
+    <h3>Area de Cadastro</h3>
+
+    <h3>Area de Login</h3>
+
+
+</body>
+</html>
+
+<!-- ====OBSERVAÇÕES ADICIONAIS=====
+
+*Identação: É um conceito de organização do código, sempre usar tab separando as tags e suas subtags, para ser melhor de identificar onde está cada coisa no código.
+
+
+-->

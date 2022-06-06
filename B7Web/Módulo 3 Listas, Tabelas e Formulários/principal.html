@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo2.css">
+    <title>Pagina inicial</title>
+</head>
+<body>
+<!-- ======Formulario===== -->
+    <h1>Pagina inicial</h1>
+    <h2>Pagina de cadastro</h2>
+    <form action="paginas/login.html" method="GET"> <!-- tem o Method "Get" e o "Post", explicação sobre ambos:
+    Quando se utiliza o method GET, os parâmetros são passados no cabeçalho da requição, ou seja, da para ver os parâmetros na URL, ex:
+https://www.alunos.b7web.com.br/login?email=suporte@b7web.com&senha=senhaQualquer123
+e esse método é o padrão utilizado pelo HTTP.
+Já o method POST:  é ao contrário do GET, ele envia os parâmetros no corpo da requisição HTTP, aí na sua URL ficaria da mesma maneira, ex:
+https://www.alunos.b7web.com.br/login
+Então para quando pede senha ou outras informações pessoais sempre usar o POST, por segurança.
+ -->
+<!-- São varios tipos de input, que são os de "texto" para texto, o "password" que oculta oque vc escreve, "checkbox" que é para marcar uma caixinha com clique, o "radio" -->
+        <h3>texto</h3> 
+        <input type="text"> <!-- para textos -->
+        <h3>email</h3>
+        <input type="email"> <!-- para email -->
+        <h3>cor</h3>
+        <input type="color" name="" id=""> <!-- cores -->
+        <h3>datas</h3>
+        <input type="date">
+
+        <br>
+        <h3>Password</h3> 
+        <input type="password"> <!-- para senhas -->
+        <br>
+        <h3>Checkbox</h3> 
+        <input type="checkbox"> <!-- para marcar opções -->
+        <br>
+        <h3>Radio</h3> <!-- para escolher a opção -->
+        <input type="radio" name="sexo">
+        <input type="radio" name="sexo">
+        <br>
+        <h3>Submit</h3> <!-- para enviar o formulario -->
+        <input type="submit">
+        <br>
+
+        <select name="ordenacao">
+            <option value="vendeu mais">mais vendidos</option>
+            <!-- o "selected" torna a opção a que já vem escolhida -->
+            <option value="ultimos adicionados" selected>recentes</option>
+        </select>
+<br><br>
+        <h3>textarea</h3>
+        <!-- cols é colunas e rows é linhas -->
+        <textarea name="descricao" id="" cols="30" rows="10"></textarea>
+       <br><br>
+        <label for="nome">Nome completo:</label><br>
+        <input type="text" name="nome" id="nome">
+
+        <br><br>
+
+        <input type="checkbox" name="" id="teste">
+        <label for="teste">Eu declaro que aceito os termos de responsabilidade</label>
+
+        <br><br>
+
+        <!-- Outra forma de usar o label, sem precisar de id -->
+
+        <label >
+            Nome completo: <br>
+            <input type="text" name="nome">
+        </label>
+
+<br><br>
+
+        <label >
+            <input type="checkbox">
+            Eu declaro que aceito os <a href="paginas/termos.html" target="_blank" class="termoslink">termos de uso</a>
+            
+        </label> <br>
+
+<!-- Praticando -->
+        <select name="Categorias">
+
+            <option value="1">Categoria 1</option>
+            <option value="2">Categoria 2</option>
+            <option value="3">Categoria 3</option>
+            <option value="4">Categoria 4</option>
+
+        </select>
+<br><br>
+    </form>
+
+<form>
+<fieldset> <!-- Fieldset cria um conjunto de campos -->
+    <legend>Dados pessoais</legend><!-- cria uma legenda no campo criando pelo fieldset -->
+    <label>
+        Primeiro nome: <br>
+        <input type="text" name="name" id="">
+    </label>
+
+    <label>
+        Sobrenome: <br>
+        <input type="text" name="lastname" id="">
+    </label>
+</fieldset>
+<fieldset>
+    <legend>Dados profissionais</legend>
+    <label>
+        Nome da empresa: <br>
+        <input type="text" name="company" id="">
+    </label>
+
+    <label>
+        Cargo na empresa: <br>
+        <input type="text" name="companyjob" id="">
+    </label>
+</fieldset>
+</form>
+<br><br>
+    
+<!-- Responsivo "vh" e "vw" no css -->
+<div class="box">
+    Teste de caixa
+</div>
+<br>
+
+<div class="inheritteste">
+    <h2>texto testando inherit a base</h2>
+</div>
+
+<div>
+    <h2> texto testando inherit o herdeiro</h2>
+</div>
+
+
+</body>
+</html>

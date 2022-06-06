@@ -1,0 +1,55 @@
+label {
+    display: block; /* coloca um item abaixo do outro automaticamente por padrao */
+    margin-bottom: 20px;
+}
+
+input [type=text], textarea, select {
+    padding: 10px;
+    width: 400px;
+    font-size: 15px;
+    border: 1px solid gray;
+    outline: 0;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 200px;
+    resize: none;/* tira a opção do usuario de expandi a caixa de escrever */
+}
+
+.termoslink {
+    color: black;
+    text-decoration: none;
+
+}
+
+.termoslink:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid rgb(114, 114, 114);
+    background: rgb(194, 194, 194);
+}
+button:hover {
+    background: rgb(107, 107, 107);
+}
+fieldset {
+    background: blanchedalmond;
+    margin-bottom: 20px;
+    border: 2px solid red;
+}
+legend {
+    background: red;
+    color: white;
+    padding: 5px;
+}
+/* O "vw" e o "vh" servem para ocupar a pagina de acordo com a porcentagem do numero digitado, ele é responsivo, acompanha aumentando e diminuindo conforme vc mexe na pagina */
+.box {
+    background-color: rgb(105, 105, 84); 
+    width: 100vw;
+    height: 20vh;
+}
+

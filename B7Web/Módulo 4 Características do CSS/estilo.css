@@ -1,0 +1,184 @@
+/*********CSS EXTERNO****** */
+/* Aqui iremos criar o CSS externo, no css externo nós criamos uma pagina separada e linkamos ela dentro da pagina da qual queremos alterar, são 3 formas de selecionar os elementos dos quais queremos alterar.
+1. Pela tag "do proprio elemento", exemplo "h1{color red}: assim todos elementos com h1 ficariam vermelhos
+2. Pela tag "Class", que é a mais utilizada, colocamos a tag class dentro do elemento e aqui alteramos ela da seguinte forma:
+.nomedaclass {color red}: assim todos elementos que contenham a classe denominada ficarão vermelhos e os demais seguiram o padrão já estabelecido.
+3. Pela tag "ID", a tag id é o mesmo esquema da tag class, porém não se usa muito, pois ela é indicada para usar em apenas uma linha.*/
+
+/*===========Tag do proprio elemento======== */
+h1 {
+    color: chartreuse;
+    font-size: 90px;
+}
+h2 {
+    color: cornflowerblue;
+    font-size: 50px;
+}
+li{
+    color: darkmagenta;
+    font-size: large;
+    font-weight: lighter;
+}
+
+/* ============ID=========== */
+#titulo {
+    color: crimson;
+    font-size: 25px;
+}
+/* ===========Class======== */
+.texto {
+    color: darkgreen;
+    font-size: 25px;
+}
+/* Caso eu queira aplicar as mesma propriedades para Class e ID sem precisar ficar criando uma para cada, basta unificar as duas da seguinte forma */
+
+#titulo, .texto { 
+    font-weight: bold;
+}
+
+/* ===========BORDAS E FUNDO========== */
+    /* colocando fundo colorido no texto "background" */
+#bg1 {
+    background: darkblue;}
+    #bg2 {
+        background: darkblue;
+        border-radius: 5px;} /* Para arredondar a borda da caixa de fundo */
+    
+    /* Tipos de bordas, as mais usadas são a Solid, Dashed e Dotted */
+#cor2 {
+    border:5px solid red;}
+#cor3 {
+    border:15px solid red;}
+#cor4 {
+    border:15px dotted red;}
+#cor5 {
+    border:15px dashed red;}
+#cor6 {
+    border:15px double red;}
+#cor7 {
+    border:15px groove red;}
+
+    /* Como definir a posição da borda no texto */
+#cor8 {
+    border-bottom:15px groove red;}
+ #cor9 {
+    border-top:15px groove red;}
+#cor10 {
+    border-left:15px groove red;}
+#cor11 {
+    border-right:15px groove red;}
+
+    /* ==========DIV========== */
+/* a tag "div" cria um quadrado do qual posso formatalo como quiser */
+
+#div1 {
+    background: chartreuse;
+    width: 200px;
+    height: 200px;
+}
+#div2 {
+    background: chartreuse;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border:3px solid darkblue;
+}
+
+/* ==========Margins e Padding no CSS========== */
+/* Margin é o espaçamento externo da borda em relação ao conteudo que está do lado de fora
+e Padding é o espaçamento interno da borda em relação ao texto */
+.margpad {
+    border: solid green 1px;
+    padding: 10px;
+    margin: 10px;
+}
+/* tambem pode definir os tamanhos dos lados dos espaçamentos por exemplo::
+padding-left: 20px então ele terá 20px para esquerda e o restante padrão, ou pode alterar as outras direções tambem por exemplo
+padding-right: 50px e assim por diante com bottom e top.
+Outra forma de especificar as direções em apenas um comando é a seguinte::
+padding: cima direita baixo esquerda, Ele é definido em sentido horario nas direções, em código fica:
+padding: 10px 20px 30px 40px*/ 
+/* Exemplos */
+.margpadpadrao {
+    border: solid green 5px;}
+
+.margpad2 {
+    border: solid red 5px;
+    padding-left: 20px ;
+}
+.margpad3 {
+    border: solid red 5px;
+    padding: 20px 30px 20px 30px ;
+    margin-top: 10px;
+}
+/* Quando definimos apenas dois, ele repete o mesmo valor para seu inverso, no exemplo está 20px cima e baixo e 30px esquerda e direita */
+.margpad4 {
+    border: solid red 5px;
+    padding: 20px 30px ;
+    margin-top: 10px ;
+}
+
+/* Metodos de alterar o tamanho e largura */
+.talarg {
+    background: black;
+    width: 100%;/* aqui tem dois metodos, com "%" e com "px" */
+    height: 100px;
+}
+
+.talarg2 {
+    background: blue;
+    width: auto;
+    height: 100px;
+}
+.link {
+    color: green;
+    font-size: 30px;
+}
+/* o "Hover" é para quando o mouse está por cima dai aplica a configuração dele */
+.link:hover {
+    color: blue;
+}
+/* O "visited" é para quando o link já tiver sido acessado dai aplica as configurações, segue o exemplo:
+
+.link:visited {
+    color: pink;
+}
+Não coloquei ativo pois já acessei todos links, iria ficar confuso.
+*/
+
+
+
+
+/* Esta configuração é padrão na maioria das paginas, sempre será usada. Para aplicar uma alteração para todas as tags da pagina, basta criar um "*{}" e colocar as definições como segue o exemplo: */
+
+* {
+    box-sizing: border-box;/* com este comando, o conteudo da tag continua seu valor real caso contenha margin e border, caso contrario ele iria se diminuir para ter o tamanho que foi estipulado  */
+
+}
+
+/* Formantando a TABELA */
+
+.tabela{
+    width: 600px;
+}
+.tabela th {
+    border: 5px solid black;
+    padding: 10px;
+    text-align: left;
+}
+.tabela td {
+    border: 2px solid black;
+}
+.tabela thead {
+    background: rgb(76, 76, 223);
+}
+.tabela table tbody {
+    background: rgb(230, 236, 230);
+}
+.tabela tbody tr:hover {
+    background: rgb(88, 228, 88);
+}
+.tabela tbody td {
+    border-bottom: 1px solid black;
+    padding: 5px;
+}

@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 50px;
+    font-size: 17px;
+}
+
+p {
+    color: blue; /* cor */
+    font-size: 20px; /* tamanho */
+    font-weight: bold; /* formato da letra, bold é negrito */
+    font-family: Arial, helvetica; /* fonte, quando tem duas fontes na mesma linha, é pra caso o computador nao tiver a primeira fonte, ele usa a segunda */
+    text-align: left; /* alinhamento */
+
+    text-transform: uppercase; /* transforma tudo, uppercase é maiuscula e lowercase minuscula */
+    letter-spacing: 5px; /* espaçamento entre uma letra e outra */
+    word-spacing: 1px; /* espaçamento entre uma palavra e outra */
+    line-height: 30px; /* espaçamentro entre as linhas (height é altura) */
+    text-shadow: 5px 5px 1px chartreuse; /* sombra no texto */
+    /*sequencia. direita, baixo, intensidade do esfumaçamento */
+
+}
+
+a {
+    text-decoration: none; /* decoração */
+}
+
+/* hover é quando o mouse está em cima */
+a:hover {
+    text-decoration: underline; /* çinha embaixo */
+}
