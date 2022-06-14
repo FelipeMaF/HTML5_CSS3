@@ -107,3 +107,5 @@ Após voce pegar algumas peças do carro e enrolar elas em plastico bolha para p
 No outro dia voce verifica se existem peças apenas ambrulhadas, fora da caixa (git status)
 Então coloca todas peças embrulhadas dentro da caixa (git commit -m "peças do dia x") e deixa a caixa ainda na sua casa.
 Então pega a caixa e envia ela para a concessonaria (git push)
+
+https://developer.mozilla.org/pt-BR/docs/MDN/Contribute/GitHub_beginners
