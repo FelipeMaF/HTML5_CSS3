@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias</title>
+</head>
+<body>
+    <h1>Imagem Dinamica</h1>
+    <p>Aumente e diminua o tamanho da tela no navegador para ver a diferença.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/P.jpg" type="image/jpg">
+        <source media="(max-width: 1050px)" srcset="imagens/M.jpg" type="image/jpg">
+        <img src="imagens/G.jpg" alt="Imagem Flexivel">
+    </picture>
+    <!--Com a Tag SOURCE deve estar tudo na ordem, ou seja, primeiro veio a menor imagem, depois a Média e depois a Grande, se inverter não funciona.-->
+
+<h1>Reproduzindo Aúdio</h1>
+<p>Vou colocar uns sons aqui e explicar como foi as tags</p>
+
+<!--Explicando as tags abaixo:
+Separamos a tag Audio da Source, fiz manualmente pois funciona melhor, o preload foi escolhido metadata pois se colocar no auto ou no none ou deixar sem nada, ele baixa tudo primeiro pra depois rodar, no metadata ele só lê oque é, e quando a pessoa da play dai começa a reproduzir e baixar-->
+<!--O Autoplay inicia sozinho (ñ funcionou) Constrols adiciona o menu de play volume tempo etc, o Loop diz para ficar repetindo o audio.-->
+<!--O audio que usei é mp3, porém alguns navegadores podem não reproduzir, então pode se adicionar outras opções como abaixo, porém ele tenta ler o primeiro que no caso, mp3 depois o segundo que é ogg e depois o terceiro-->
+<audio preload="metadata" autoplay controls loop> 
+    <source src="Audio/Mapu e Ixã.mp3" type="audio/mpeg">
+    <source src="Audio/Mapu e Ixã.ogg" type="audio/ogg">
+    <source src="Audio/Mapu e Ixã.wav" type="audio/wav">
+    <p>Infelizmente seu navegador não reproduz MP3</p>
+    <!--Caso o navegador não consiga ler nenhum dos arquivos acima, então irá apresentar esta mensagem que coloquei no p acima.-->
+</audio>
+
+</body>
+</html>

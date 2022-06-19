@@ -1,0 +1,19 @@
+:root {
+    --bg-color: black;
+    --bg-second: gray;
+    --font-color: white;
+
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1 {
+    color: var(--font-color);
+}
+
+.container {
+    background-color: var(--bg-second);
+    color: var(--font-color);
+}

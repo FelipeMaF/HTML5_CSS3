@@ -1,0 +1,19 @@
+/*No aspectio ratio 1/1 quer dizer que se a tela ficar exatamente na mesma proporção, ela irá exibir a cor vermelha... 1 largura / 1 altura*/
+@media (aspect-ratio: 1/1) {
+    body {
+        background-color: red;
+    }
+}
+
+/*um exemplo de proporção aqui seria de menor/maior  ..400x200.., Por ser MIN, então no minimo deve se ter a metade da largura, se for 400x201 já não funciona, pois a altura ultrapassou a metade da largura. Mas poderi ser 400x50 pois 50 está abaixo da metade da largura, ou seja, o minimo é metade da largura */
+@media (min-aspect-ratio: 2/1) {
+    body {
+        background-color: blue;
+    }
+}
+/*um exemplo de proporção aqui seria de menor/maior  ..200x400.. Por sr MAX, então ele não tem limite após passar a proporção do dobro da largura, por exemplo 200x399 não daria certo, pois não bateu o dobro da largura, já 200x400 ou 200x900, já daria, pois é no minimo o dobro e não possui maximo.*/
+@media (max-aspect-ratio: 1/2) {
+    body {
+        background-color: green;
+    }
+}
